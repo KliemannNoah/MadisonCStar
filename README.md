@@ -40,16 +40,16 @@ This file contains a ranking of all of the regions in the League.
 # Areas of Futre Improvement
 
 ### Planned
--Multi-Thread HTTP Requests to speed up performance
--Modularize some function methods to make it easier to run without needing to run the whole script
--Better comments are needed in order to pass on this script to new users
--Find a way to create a historical set of CSV files to look at past information
--Extract and manipulate previous season ranks from OP.GG for after rank reset
--Modularize ouput to allow users to only export columns they want to see
--Save the team data continuously encase of failover
+- Multi-Thread HTTP Requests to speed up performance
+- Modularize some function methods to make it easier to run without needing to run the whole script
+- Better comments are needed in order to pass on this script to new users
+- Find a way to create a historical set of CSV files to look at past information
+- Extract and manipulate previous season ranks from OP.GG for after rank reset
+- Modularize ouput to allow users to only export columns they want to see
+- Save the team data continuously encase of failover
 
 ### Stretch Goals
--Include Visualization Metrics into the site for apperance purposes
--Possibly change data structures to dict of dicts instead of dict with a list
--Create documentation on how to do some of the website parsing work from scratch incase of CSL changes
--Find a way to replicate this for playoffs
+- Include Visualization Metrics into the site for apperance purposes
+- Possibly change data structures to dict of dicts instead of dict with a list
+- Create documentation on how to do some of the website parsing work from scratch incase of CSL changes
+- Find a way to replicate this for playoffs
