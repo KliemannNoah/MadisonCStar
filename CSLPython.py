@@ -23,6 +23,8 @@ teamGameRecord = []
 teamLink = []
 averageRank = []
 averageRankValue = []
+averageRank5 = []
+averageRank5Value = []
 teamOPGG1 = []
 teamOPGG2 = []
 
@@ -58,7 +60,8 @@ def teams(url, name, region):
     value = players(opgg, name, region)
     averageRank.append(value[0])
     averageRankValue.append(value[1])
-
+    averageRank5.append(value[2])
+    averageRank5Value.append(value[3])
 
 
 # Select the Team Name, Region, and URL
@@ -94,7 +97,7 @@ for table in soup.find_all('tr', tag.get('class') is re.compile("match-up")):
 
 combined = []
 print(datetime.datetime.now())
-combined.append(['Team Name', 'Region', 'CSL Link', 'Series Record', 'Series Wins', 'Series Losses', 'Game Record', 'Game Wins', 'Game Losses', 'Average Rank','Average Rank Number', 'First OP.GG', 'Second OP.GG'])
+combined.append(['Team Name', 'Region', 'CSL Link', 'Series Record', 'Series Wins', 'Series Losses', 'Game Record', 'Game Wins', 'Game Losses', 'Average Rank','Average Rank Number', '5 Best Players', '5 Best Players Number','First OP.GG', 'Second OP.GG'])
 # Sanity Check
 print "All Values should be Equal:"
 print "\tNumber of Team Names: " + str(len(teamName))
@@ -107,7 +110,7 @@ print "\tNumber of OP.GG's: " + str(len(teamOPGG1))
 print "\n****************************************************\n"
 
 for i in range(len(teamGameRecord)):
-    combined.append([teamName[i], teamRegion[i], teamLink[i], teamSeriesRecord[i], teamSeriesWins[i], teamSeriesLosses[i], teamGameRecord[i], teamGameWins[i], teamGameLosses[i], averageRank[i], averageRankValue[i], teamOPGG1[i], teamOPGG2[i]])
+    combined.append([teamName[i], teamRegion[i], teamLink[i], teamSeriesRecord[i], teamSeriesWins[i], teamSeriesLosses[i], teamGameRecord[i], teamGameWins[i], teamGameLosses[i], averageRank[i], averageRankValue[i], averageRank5[i], averageRank5Value[i], teamOPGG1[i], teamOPGG2[i]])
 print "Number of Total Teams Recorded: " + str(len(combined))
 
 with open('OpenLeagueTeams.csv', 'wb') as csvFile:
@@ -115,7 +118,7 @@ with open('OpenLeagueTeams.csv', 'wb') as csvFile:
     writer.writerows(combined)
 csvFile.close()
 print 'Python and Players Complete'
-better()
-print 'Better Players Complete'
+#better()
+#print 'Better Players Complete'
 region()
 print 'Region Complete'

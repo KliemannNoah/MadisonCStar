@@ -1,5 +1,4 @@
 import csv
-#from collections import defaultdict
 import math
 from collections import OrderedDict
 
@@ -36,7 +35,6 @@ def better():
         "Grandmaster": 26,
         "Challenger": 27
     }
-    #rankDistribution = defaultdict(list)
     rankDistribution = OrderedDict()
     teamRegion = []
     teamranked = []

@@ -43,8 +43,10 @@ val_list = list(rankDistribution.values())
 
 def players(URLlist, name, region):
     playerList = []
-    playerRank = []
-    sum = 0
+    playerRankFull = []
+    playerRank5 = []
+    teamrank = 0
+	teamrank5 = 0
     for player in URLlist:
         page_link = player
         r = requests.get(page_link, timeout=30)
@@ -52,24 +54,28 @@ def players(URLlist, name, region):
         try:
             a = soup.select_one("[class~=TierRank]" or "[class~=TierRank unranked]").text.strip()
             playerList.append([name, region, a, rankDistribution[a], player.encode("utf-8")])
-            playerRank.append(rankDistribution[a])
+            playerRankFull.append(rankDistribution[a])
         except AttributeError:
             playerList.append([name, region, "RANK NOT FOUND", 0, player.encode("utf-8")])
-            playerRank.append(0)
-
+            playerRankFull.append(0)
 
     with open('OpenLeaguePlayers.csv', 'ab') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(playerList)
     csvFile.close()
 
-    for rank in playerRank:
-        sum = sum + rank
-
-    if len(playerRank) != 0:
-        average = math.ceil(sum / len(playerRank))
-        response = [key_list[val_list.index(average)], average]
+    for rank in playerRankFull:
+        teamrank = teamrank + rank
+		
+	playerRankFull.sort(reverse=True)
+	
+	for rank in playerRankFull[:5]:
+		teamrank5 = teamrank5 + rank
+	
+    if len(playerRankFull) != 0:
+        average = math.ceil(teamrank / len(playerRankFull))
+		average5 = math.ceil(teamrank5 / 5)
+        response = [key_list[val_list.index(average)], average, key_list[val_list.index(average5)], average5]
     else:
-        response = ["No Players Found", 0]
-
+        response = ["No Players Found", 0, "No Players Found", 0]
     return response

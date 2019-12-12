@@ -61,15 +61,15 @@ def region():
     val_list = list(rankMapping.values())
 
     # Read in File of Teams
-    with open('OpenLeagueTeam2.csv') as csv_file:
+    with open('OpenLeagueTeam.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for key in csv_reader:
             if key[0] == 'Team Name':
                 pass
             elif key[1] in regionRankList:
-                regionRankList[key[1]].append(int(float(key[3])))
+                regionRankList[key[1]].append(int(float(key[12])))
             else:
-                regionRankList[key[1]] = [int(float(key[3]))]
+                regionRankList[key[1]] = [int(float(key[12]))]
 
     # Sort within each conference
     for conference in regionRankList:
