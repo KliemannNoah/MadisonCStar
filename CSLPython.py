@@ -70,8 +70,6 @@ for tag in soup.find_all("table"):
         teamRegion.append(tag.th.text)
         teamName.append(team.text)
         teams('https://cstarleague.com' + team.a['href'], team.text, tag.th.text)
-        #teamOPGG1.append('')
-        #teamOPGG2.append('')
 
 # Select the Series and Game Record
 for table in soup.find_all('tr', tag.get('class') is re.compile("match-up")):
@@ -83,7 +81,7 @@ for table in soup.find_all('tr', tag.get('class') is re.compile("match-up")):
             c = c.replace('(', '')
             c = c.strip(')')
             c = c.split('|')
-            #print c
+
             series = c[0].strip().split('-')
             match = c[1].strip().split('-')
 

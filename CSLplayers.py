@@ -57,6 +57,7 @@ def players(URLlist, name, region):
             playerList.append([name, region, "RANK NOT FOUND", 0, player.encode("utf-8")])
             playerRank.append(0)
 
+
     with open('OpenLeaguePlayers.csv', 'ab') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(playerList)
@@ -64,19 +65,11 @@ def players(URLlist, name, region):
 
     for rank in playerRank:
         sum = sum + rank
+
     if len(playerRank) != 0:
         average = math.ceil(sum / len(playerRank))
         response = [key_list[val_list.index(average)], average]
     else:
         response = ["No Players Found", 0]
+
     return response
-
-
-#URLlist = ['https://na.op.gg/summoner/userName=Shr3kLovezMe', 'https://na.op.gg/summoner/userName=K%C3%B8%C3%9Fae', 'https://na.op.gg/summoner/userName=Muffules', 'https://na.op.gg/summoner/userName=Yaongi']
-#playerList = []
-#for player in URLlist:
-    #page_link = player
-    #r = requests.get(page_link, timeout=5)
-    #soup = BeautifulSoup(r.content, "html5lib")
-    #playerList.append([soup.select_one("[class^=Tier]").text, player])
-    #print soup.select_one("[class~=TierRank]").text + " " + player

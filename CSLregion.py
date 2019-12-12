@@ -96,7 +96,6 @@ for team in regionRankList:
     members = 0
     for member in regionRankList[team][:2]:
         regionRank += int(float(member))
-        # https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
         members = members + 1
     a = math.ceil(regionRank/members)
     top2Rank.append(a)
@@ -108,7 +107,6 @@ for team in regionRankList:
     members = 0
     for member in regionRankList[team][:4]:
         regionRank += int(float(member))
-        # https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
         members = members + 1
     a = math.ceil(regionRank/members)
     top4Rank.append(a)
@@ -120,7 +118,6 @@ for team in regionRankList:
     members = 0
     for member in regionRankList[team][:6]:
         regionRank += int(float(member))
-        # https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
         members = members + 1
     a = math.ceil(regionRank/members)
     top6Rank.append(a)
@@ -132,7 +129,6 @@ for team in regionRankList:
     members = 0
     for member in regionRankList[team][:8]:
         regionRank += int(float(member))
-        # https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
         members = members + 1
     a = math.ceil(regionRank/members)
     top8Rank.append(a)
@@ -144,7 +140,6 @@ for team in regionRankList:
     members = 0
     for member in regionRankList[team][:10]:
         regionRank += int(float(member))
-        # https://stackoverflow.com/questions/1841565/valueerror-invalid-literal-for-int-with-base-10
         members = members + 1
     a = math.ceil(regionRank/members)
     top10Rank.append(a)
