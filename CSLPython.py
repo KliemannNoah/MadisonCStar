@@ -41,7 +41,7 @@ def teams(url, name, region):
         ign = tag.get('title').split(': ')[1]
         textContent.append(ign)
         opgg.append("https://na.op.gg/summoner/userName=" + ign)
-        #print "https://na.op.gg/summoner/userName=" + ign
+        # print "https://na.op.gg/summoner/userName=" + ign
     # op.gg
     query1 = 'https://na.op.gg/multi/query='
     query2 = 'https://na.op.gg/multi/query='
@@ -66,7 +66,7 @@ def teams(url, name, region):
 
 # Select the Team Name, Region, and URL
 for tag in soup.find_all("table"):
-    print "Starting Region: " + tag.th.text
+    print ("Starting Region: " + tag.th.text)
     print(datetime.datetime.now())
     for team in tag.find_all('h3'):
         teamLink.append('https://cstarleague.com' + team.a['href'])
@@ -78,7 +78,7 @@ for tag in soup.find_all("table"):
 for table in soup.find_all('tr', tag.get('class') is re.compile("match-up")):
     for a in table.find_all('td', string=re.compile('|')):
         b = a.string.split('\n')
-        if len(b) is 3:
+        if len(b) == 3:
 
             c = b[1].strip()
             c = c.replace('(', '')
@@ -99,26 +99,26 @@ combined = []
 print(datetime.datetime.now())
 combined.append(['Team Name', 'Region', 'CSL Link', 'Series Record', 'Series Wins', 'Series Losses', 'Game Record', 'Game Wins', 'Game Losses', 'Average Rank','Average Rank Number', '5 Best Players', '5 Best Players Number','First OP.GG', 'Second OP.GG'])
 # Sanity Check
-print "All Values should be Equal:"
-print "\tNumber of Team Names: " + str(len(teamName))
-print "\tNumber of Team Regions: " + str(len(teamRegion))
-print "\tNumber of Team URL Links: " + str(len(teamLink))
-print "\tNumber of Series Record's: " + str(len(teamSeriesRecord))
-print "\tNumber of Games Record's: " + str(len(teamGameRecord))
-print "\tNumber of OP.GG's: " + str(len(teamOPGG1))
+print ("All Values should be Equal:")
+print ("\tNumber of Team Names: " + str(len(teamName)))
+print ("\tNumber of Team Regions: " + str(len(teamRegion)))
+print ("\tNumber of Team URL Links: " + str(len(teamLink)))
+print ("\tNumber of Series Record's: " + str(len(teamSeriesRecord)))
+print ("\tNumber of Games Record's: " + str(len(teamGameRecord)))
+print ("\tNumber of OP.GG's: " + str(len(teamOPGG1)))
 
-print "\n****************************************************\n"
+print ("\n****************************************************\n")
 
 for i in range(len(teamGameRecord)):
     combined.append([teamName[i], teamRegion[i], teamLink[i], teamSeriesRecord[i], teamSeriesWins[i], teamSeriesLosses[i], teamGameRecord[i], teamGameWins[i], teamGameLosses[i], averageRank[i], averageRankValue[i], averageRank5[i], averageRank5Value[i], teamOPGG1[i], teamOPGG2[i]])
-print "Number of Total Teams Recorded: " + str(len(combined))
+print ("Number of Total Teams Recorded: " + str(len(combined)))
 
 with open('OpenLeagueTeams.csv', 'wb') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerows(combined)
 csvFile.close()
-print 'Python and Players Complete'
-#better()
-#print 'Better Players Complete'
+print ('Python and Players Complete')
+# better()
+# print 'Better Players Complete'
 region()
-print 'Region Complete'
+print ('Region Complete')
