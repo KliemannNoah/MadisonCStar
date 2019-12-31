@@ -46,32 +46,63 @@ key_list = list(rankDistribution.keys())
 val_list = list(rankDistribution.values())
 val_list2 = list(league.values())
 
+t = {}
+p = {}
 
-def determineTeamRank():
+def determineTeamRank(listOfPlayerVals):
     teamrank = 0
     teamrank5 = 0
 
-    for rank in playerRankFull:
+    for rank in listOfPlayerVals:
         teamrank = teamrank + rank
 
-    playerRankFull.sort(reverse=True)
+    listOfPlayerVals.sort(reverse=True)
 
-    for rank in playerRankFull[:5]:
+    for rank in listOfPlayerVals[:5]:
         teamrank5 = teamrank5 + rank
 
-    if len(playerRankFull) != 0:
-        average = math.ceil(teamrank / len(playerRankFull))
+    if len(listOfPlayerVals) != 0:
+        average = math.ceil(teamrank / len(listOfPlayerVals))
         average5 = math.ceil(teamrank5 / 5)
         response = [key_list[val_list.index(average)], average, key_list[val_list.index(average5)], average5]
     else:
         response = ["No Players Found", 0, "No Players Found", 0]
+    #print(response)
+    return response
 
+
+
+
+with open('OpenLeagueTeams2.json', 'r') as f:
+    t = json.load(f)
 
 with open('OpenLeaguePlayers.json', 'r') as f:
-    league = json.load(f)
+    p = json.load(f)
 
-for key, value in league.items():
-    determineTeamRank(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
 
-with open('OpenLeagueComposite.json', 'w') as outfile:
+tempTeams = {}
+
+for team in t:
+    tempTeams[team] = []
+
+#for key, value in league:
+#    tempTeams[team] = []
+
+pkeys = p.keys()
+for key in pkeys:
+    tempPlayer = p[key]
+    tempTeams[tempPlayer["team"]].append(tempPlayer["rankValue"])
+
+for key in tempTeams:
+    #print(key)
+    print(key + " - " + str(determineTeamRank(tempTeams[key])))
+
+
+#for key, value in league.items():
+#    determineTeamRank(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
+
+with open('OpenLeagueRank.json', 'w') as outfile:
     json.dump(teamDict, outfile)
+
+
+

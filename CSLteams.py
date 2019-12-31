@@ -1,11 +1,5 @@
 from bs4 import BeautifulSoup
-from CSLplayers import players
-#from CSLcalculator import better
-from CSLregion import region
 import requests
-import csv
-import re
-import datetime
 import json
 
 r = requests.get('https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020', timeout=30)

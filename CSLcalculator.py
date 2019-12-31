@@ -1,10 +1,8 @@
-# import csv
-# import math
-# from collections import OrderedDict
 import json
 from bs4 import BeautifulSoup
 import requests
 import re
+import datetime
 
 rankDistribution = {
     "Unranked": 0,
@@ -98,13 +96,17 @@ def teams(url):
 
 with open('OpenLeagueTeams.json', 'r') as f:
     league = json.load(f)
-# print(league)
+
+print(datetime.datetime.now())
+
 for key, value in league.items():
     data = teams('https://cstarleague.com' + league[key]['link'])
     league[key]['playerList'] = data[0]
     league[key]['opgg1'] = data[1]
     league[key]['opgg2'] = data[2]
     #print(league[key])
+
+print(datetime.datetime.now())
 
 with open('OpenLeagueTeams2.json', 'w') as outfile:
     json.dump(league, outfile)
