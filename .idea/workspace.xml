@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0f445f36-88b2-4c4c-bd7d-4cb6e6968b43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLcalculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLcalculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLrank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLteams.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLteams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeaguePlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLcalculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-329">
+            <state relative-caret-position="731">
               <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -45,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLplayers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="1343">
               <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -58,11 +55,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSLrank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="69">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#207#783#0" />
+                <element signature="e#175#751#0" />
               </folding>
             </state>
           </provider>
@@ -71,9 +68,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLregion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="35" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#93#789#0" />
               </folding>
             </state>
@@ -151,7 +148,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../environment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CSLplayers.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -251,7 +248,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CSLrank" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="CSLrank" type="PythonConfigurationType" factoryName="Python">
       <module name="MadisonCStar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,15 +291,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.CSLrank" />
       <item itemvalue="Python.CSLPython" />
       <item itemvalue="Python.CSLteams" />
       <item itemvalue="Python.CSLcalculator" />
       <item itemvalue="Python.CSLplayers" />
-      <item itemvalue="Python.CSLrank" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.CSLrank" />
         <item itemvalue="Python.CSLPython" />
       </list>
     </recent_temporary>
@@ -334,14 +330,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49940476" visible="true" weight="0.33607683" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" weight="0.33607683" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,16 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSLregion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#93#789#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -420,6 +405,17 @@
           <folding>
             <element signature="e#487#509#0" />
             <element signature="e#661#799#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLcalculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#153#729#0" />
           </folding>
         </state>
       </provider>
@@ -434,20 +430,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSLcalculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#153#729#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSLplayers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="1343">
           <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -456,13 +441,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CSLregion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <element signature="e#93#789#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CSLrank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="69">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#207#783#0" />
+            <element signature="e#175#751#0" />
           </folding>
         </state>
       </provider>

@@ -1,12 +1,9 @@
-import json
-from bs4 import BeautifulSoup
-import requests
-import re
 import math
 from multiprocessing.dummy import Pool as ThreadPool
 import concurrent.futures
 import json
 import datetime
+from collections import defaultdict
 
 rankDistribution = {
     "Unranked": 0,
@@ -46,8 +43,8 @@ key_list = list(rankDistribution.keys())
 val_list = list(rankDistribution.values())
 val_list2 = list(league.values())
 
-t = {}
-p = {}
+teams = {}
+players = {}
 
 def determineTeamRank(listOfPlayerVals):
     teamrank = 0
@@ -71,8 +68,6 @@ def determineTeamRank(listOfPlayerVals):
     return response
 
 
-
-
 with open('OpenLeagueTeams2.json', 'r') as f:
     t = json.load(f)
 
@@ -81,28 +76,31 @@ with open('OpenLeaguePlayers.json', 'r') as f:
 
 
 tempTeams = {}
+permanentTeams = {}
 
-for team in t:
+for team in teams:
     tempTeams[team] = []
 
-#for key, value in league:
-#    tempTeams[team] = []
-
-pkeys = p.keys()
+pkeys = players.keys()
 for key in pkeys:
-    tempPlayer = p[key]
+    tempPlayer = players[key]
     tempTeams[tempPlayer["team"]].append(tempPlayer["rankValue"])
 
 for key in tempTeams:
-    #print(key)
-    print(key + " - " + str(determineTeamRank(tempTeams[key])))
+    statement = determineTeamRank(tempTeams[key])
+    permanentTeams[key] = {
+        'rank': statement[0],
+        'rankValue': statement[1],
+        'rank5': statement[2],
+        'rank5Value': statement[3]
+    }
+    print(key, permanentTeams[key])
 
+compositeDict = defaultdict(dict)
 
-#for key, value in league.items():
-#    determineTeamRank(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
+for dictionary in (t, permanentTeams):
+    for key, value in dictionary.items():
+        compositeDict[key].update(value)
 
 with open('OpenLeagueRank.json', 'w') as outfile:
-    json.dump(teamDict, outfile)
-
-
-
+    json.dump(compositeDict, outfile)
