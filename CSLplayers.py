@@ -104,15 +104,16 @@ def players(URLlist, name, region):
     concurrent.futures.wait(futures)
 
 
-with open('OpenLeagueTeams2.json', 'r') as f:
-    league = json.load(f)
+def pages():
+    with open('OpenLeagueTeams2.json', 'r') as f:
+        league = json.load(f)
 
-print(datetime.datetime.now())
+    print(datetime.datetime.now())
 
-for key, value in league.items():
-    players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
+    for key, value in league.items():
+        players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
 
-print(datetime.datetime.now())
+    print(datetime.datetime.now())
 
-with open('OpenLeaguePlayers.json', 'w') as outfile:
-    json.dump(playerDict, outfile)
+    with open('OpenLeaguePlayers.json', 'w') as outfile:
+        json.dump(playerDict, outfile)

@@ -1,8 +1,9 @@
 import csv
 from collections import defaultdict
 import math
+import json
 
-
+league = {}
 def region():
     rankMapping = {
         "Unranked": 0,
@@ -61,12 +62,14 @@ def region():
     val_list = list(rankMapping.values())
 
     # Read in File of Teams
-    with open('OpenLeagueTeam.csv') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
+    with open('OpenLeagueRank.json', 'r') as f:
+        csv_reader = json.load(f)
+    #with open('OpenLeagueTeam.csv') as csv_file:
+        #csv_reader = csv.reader(csv_file, delimiter=',')
         for key in csv_reader:
-            if key[0] == 'Team Name':
-                pass
-            elif key[1] in regionRankList:
+            #if key[0] == 'Team Name':
+            #    pass
+            if key[1] in regionRankList:
                 regionRankList[key[1]].append(int(float(key[12])))
             else:
                 regionRankList[key[1]] = [int(float(key[12]))]

@@ -94,19 +94,15 @@ def teams(url):
     return [textContent, query1, query2]
 
 
-with open('OpenLeagueTeams.json', 'r') as f:
-    league = json.load(f)
+def calculations():
+    with open('OpenLeagueTeams.json', 'r') as f:
+        league = json.load(f)
 
-print(datetime.datetime.now())
+    for key, value in league.items():
+        data = teams('https://cstarleague.com' + league[key]['link'])
+        league[key]['playerList'] = data[0]
+        league[key]['opgg1'] = data[1]
+        league[key]['opgg2'] = data[2]
 
-for key, value in league.items():
-    data = teams('https://cstarleague.com' + league[key]['link'])
-    league[key]['playerList'] = data[0]
-    league[key]['opgg1'] = data[1]
-    league[key]['opgg2'] = data[2]
-    #print(league[key])
-
-print(datetime.datetime.now())
-
-with open('OpenLeagueTeams2.json', 'w') as outfile:
-    json.dump(league, outfile)
+    with open('OpenLeagueTeams2.json', 'w') as outfile:
+        json.dump(league, outfile)

@@ -1,5 +1,4 @@
 import math
-from multiprocessing.dummy import Pool as ThreadPool
 import concurrent.futures
 import json
 import datetime
@@ -46,6 +45,7 @@ val_list2 = list(league.values())
 teams = {}
 players = {}
 
+
 def determineTeamRank(listOfPlayerVals):
     teamrank = 0
     teamrank5 = 0
@@ -68,39 +68,40 @@ def determineTeamRank(listOfPlayerVals):
     return response
 
 
-with open('OpenLeagueTeams2.json', 'r') as f:
-    t = json.load(f)
+def ranking():
+    with open('OpenLeagueTeams2.json', 'r') as f:
+        teams = json.load(f)
 
-with open('OpenLeaguePlayers.json', 'r') as f:
-    p = json.load(f)
+    with open('OpenLeaguePlayers.json', 'r') as f:
+        players = json.load(f)
 
 
-tempTeams = {}
-permanentTeams = {}
+    tempTeams = {}
+    permanentTeams = {}
 
-for team in teams:
-    tempTeams[team] = []
+    for team in teams:
+        tempTeams[team] = []
 
-pkeys = players.keys()
-for key in pkeys:
-    tempPlayer = players[key]
-    tempTeams[tempPlayer["team"]].append(tempPlayer["rankValue"])
+    pkeys = players.keys()
+    for key in pkeys:
+        tempPlayer = players[key]
+        tempTeams[tempPlayer["team"]].append(tempPlayer["rankValue"])
 
-for key in tempTeams:
-    statement = determineTeamRank(tempTeams[key])
-    permanentTeams[key] = {
-        'rank': statement[0],
-        'rankValue': statement[1],
-        'rank5': statement[2],
-        'rank5Value': statement[3]
-    }
-    print(key, permanentTeams[key])
+    for key in tempTeams:
+        statement = determineTeamRank(tempTeams[key])
+        permanentTeams[key] = {
+            'rank': statement[0],
+            'rankValue': statement[1],
+            'rank5': statement[2],
+            'rank5Value': statement[3]
+        }
+        #print(key, permanentTeams[key])
 
-compositeDict = defaultdict(dict)
+    compositeDict = defaultdict(dict)
 
-for dictionary in (t, permanentTeams):
-    for key, value in dictionary.items():
-        compositeDict[key].update(value)
+    for dictionary in (teams, permanentTeams):
+        for key, value in dictionary.items():
+            compositeDict[key].update(value)
 
-with open('OpenLeagueRank.json', 'w') as outfile:
-    json.dump(compositeDict, outfile)
+    with open('OpenLeagueRank.json', 'w') as outfile:
+        json.dump(compositeDict, outfile)
