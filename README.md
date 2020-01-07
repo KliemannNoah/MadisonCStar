@@ -52,6 +52,7 @@ This file contains a ranking of all of the regions in the League.
 - Extract and manipulate previous season ranks from OP.GG for after rank reset
 - Modularize ouput to allow users to only export columns they want to see
 - Save the team data continuously encase of failover (Complete)
+- Split files into different repositories
 
 ### Stretch Goals
 - Include Visualization Metrics into the site for apperance purposes

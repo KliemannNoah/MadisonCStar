@@ -2,32 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-playerDict = {
-    'name': 'IGN',
-    'team': 'Team',
-    'region': 'Region',
-    'rank': 'Rank',
-    'rankValue': 'Rank Value',
-    'op.gg': 'OP.GG'
-}
-
-leagueDict = {
-    'teamName': 'Team Name',
-    'region': 'Region',
-    'link': 'CSL Link',
-    'seriesWins': 'Series Wins',
-    'seriesLosses': 'Series Losses',
-    'gameWins': 'Game Wins',
-    'gameLosses': 'Game Losses',
-    'playerList': [],
-    'rank': 'Average Rank',
-    'rankValue': 'Average Rank Value',
-    'rank5': 'Top 5 Rank',
-    'rank5Value': 'Top 5 Rank Value',
-    'opgg1': 'OP.GG 1',
-    'opgg2': 'OP.GG 2'
-}
-
 teamList = {}
 
 
@@ -53,6 +27,6 @@ def teams(url):
                 'gameLosses': record[1][1].strip(),
             }
 
-    #with open('GoldLeagueTeams.json', 'w') as outfile:
+    # with open('GoldLeagueTeams.json', 'w') as outfile:
     with open('OpenLeagueTeams.json', 'w') as outfile:
         json.dump(teamList, outfile)

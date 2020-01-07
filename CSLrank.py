@@ -1,7 +1,5 @@
 import math
-import concurrent.futures
 import json
-import datetime
 from collections import defaultdict
 
 rankDistribution = {
@@ -38,13 +36,10 @@ rankDistribution = {
 }
 league = {}
 teamDict = {}
-
-key_list = list(rankDistribution.keys())
-val_list = list(rankDistribution.values())
-val_list2 = list(league.values())
-
 teams = {}
 players = {}
+key_list = list(rankDistribution.keys())
+val_list = list(rankDistribution.values())
 
 
 def determineTeamRank(listOfPlayerVals):
@@ -73,13 +68,12 @@ def determineTeamRank(listOfPlayerVals):
 
 def ranking():
     with open('OpenLeagueTeams2.json', 'r') as f:
-    #with open('GoldLeagueTeams2.json', 'r') as f:
+    # with open('GoldLeagueTeams2.json', 'r') as f:
         teams = json.load(f)
 
     with open('OpenLeaguePlayers.json', 'r') as f:
-    #with open('GoldLeaguePlayers.json', 'r') as f:
+    # with open('GoldLeaguePlayers.json', 'r') as f:
         players = json.load(f)
-
 
     tempTeams = {}
     permanentTeams = {}
@@ -100,7 +94,6 @@ def ranking():
             'rank5': statement[2],
             'rank5Value': statement[3]
         }
-        #print(key, permanentTeams[key])
 
     compositeDict = defaultdict(dict)
 
@@ -109,5 +102,5 @@ def ranking():
             compositeDict[key].update(value)
 
     with open('OpenLeagueRank.json', 'w') as outfile:
-    #with open('GoldLeagueRank.json', 'w') as outfile:
+    # with open('GoldLeagueRank.json', 'w') as outfile:
         json.dump(compositeDict, outfile)

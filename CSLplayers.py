@@ -1,11 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
-import csv
-import math
 from multiprocessing.dummy import Pool as ThreadPool
 import concurrent.futures
 import json
-import datetime
 rankDistribution = {
     "Unranked": 0,
     "RANK NOT FOUND": 0,
@@ -37,30 +34,6 @@ rankDistribution = {
     "Grandmaster": 26,
     "Challenger": 27
 }
-
-leagueDict = {
-    #'teamName': 'Team Name',
-    #'region': 'Region',
-    #'link': 'CSL Link',
-    #'seriesWins': 'Series Wins',
-    #'seriesLosses': 'Series Losses',
-    #'gameWins': 'Game Wins',
-    #'gameLosses': 'Game Losses',
-    #'playerList': [],
-    #'rank': 'Average Rank',
-    #'rankValue': 'Average Rank Value',
-    #'rank5': 'Top 5 Rank',
-    #'rank5Value': 'Top 5 Rank Value',
-    #'opgg1': 'OP.GG 1',
-    #'opgg2': 'OP.GG 2'
-}
-
-# list out keys and values separately
-key_list = list(rankDistribution.keys())
-val_list = list(rankDistribution.values())
-pool = ThreadPool(10)
-
-
 playerDict = {
     #'name': 'IGN',
     #'team': 'Team',
@@ -69,10 +42,10 @@ playerDict = {
     #'rankValue': 'Rank Value',
     #'op.gg': 'OP.GG'
 }
+pool = ThreadPool(10)
 
 
 def parallel(package):
-
     player = package[0]
     team = package[1]
     region = package[2]
@@ -94,27 +67,25 @@ def parallel(package):
         if rankDistribution[a] < 17:
             playerDict[player]['rank'] = a
             playerDict[player]['rankValue'] = rankDistribution[a]
-
     except AttributeError:
         playerDict[player]['rank'] = "RANK NOT FOUND"
         playerDict[player]['rankValue'] = 0
 
 
 def players(URLlist, name, region):
-    # for player in URLlist:
     executor = concurrent.futures.ThreadPoolExecutor(10)
     futures = [executor.submit(parallel, [player, name, region]) for player in URLlist]
     concurrent.futures.wait(futures)
 
 
 def pages():
-    #with open('GoldLeagueTeams2.json', 'r') as f:
+    # with open('GoldLeagueTeams2.json', 'r') as f:
     with open('OpenLeagueTeams2.json', 'r') as f:
         league = json.load(f)
 
     for key, value in league.items():
         players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
 
-    #with open('GoldLeaguePlayers.json', 'w') as outfile:
+    # with open('GoldLeaguePlayers.json', 'w') as outfile:
     with open('OpenLeaguePlayers.json', 'w') as outfile:
         json.dump(playerDict, outfile)

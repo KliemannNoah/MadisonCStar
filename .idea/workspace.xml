@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f445f36-88b2-4c4c-bd7d-4cb6e6968b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GoldLeaguePlayers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoldLeagueRank.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoldLeagueRegion.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoldLeagueRegion.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoldLeagueTeams.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoldLeagueTeams2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenLeagueRegion.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenLeagueRegion.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLPython.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLcalculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLcalculator.py" afterDir="false" />
@@ -17,9 +10,7 @@
       <change beforePath="$PROJECT_DIR$/CSLrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLrank.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLregion.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLregion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLteams.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLteams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeaguePlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeagueRegion.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +24,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>date</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

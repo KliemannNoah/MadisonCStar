@@ -26,3 +26,30 @@ print("\tGenerating Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
 region()
 
 print("Complete - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+
+
+playerDict = {
+    'name': 'IGN',
+    'team': 'Team',
+    'region': 'Region',
+    'rank': 'Rank',
+    'rankValue': 'Rank Value',
+    'op.gg': 'OP.GG'
+}
+
+leagueDict = {
+    'teamName': 'Team Name',
+    'region': 'Region',
+    'link': 'CSL Link',
+    'seriesWins': 'Series Wins',
+    'seriesLosses': 'Series Losses',
+    'gameWins': 'Game Wins',
+    'gameLosses': 'Game Losses',
+    'playerList': [],
+    'rank': 'Average Rank',
+    'rankValue': 'Average Rank Value',
+    'rank5': 'Top 5 Rank',
+    'rank5Value': 'Top 5 Rank Value',
+    'opgg1': 'OP.GG 1',
+    'opgg2': 'OP.GG 2'
+}

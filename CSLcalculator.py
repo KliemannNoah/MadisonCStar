@@ -2,7 +2,6 @@ import json
 from bs4 import BeautifulSoup
 import requests
 import re
-import datetime
 
 rankDistribution = {
     "Unranked": 0,
@@ -35,38 +34,6 @@ rankDistribution = {
     "Grandmaster": 26,
     "Challenger": 27
 }
-
-leagueDict = {
-    'teamName': 'Team Name',
-    'region': 'Region',
-    'link': 'CSL Link',
-    'seriesWins': 'Series Wins',
-    'seriesLosses': 'Series Losses',
-    'gameWins': 'Game Wins',
-    'gameLosses': 'Game Losses',
-    'playerList': [],
-    'rank': 'Average Rank',
-    'rankValue': 'Average Rank Value',
-    'rank5': 'Top 5 Rank',
-    'rank5Value': 'Top 5 Rank Value',
-    'opgg1': 'OP.GG 1',
-    'opgg2': 'OP.GG 2'
-}
-
-#teamList[name] = [{
-#    'teamName': name,
-#    'region': region,
-#    'link': link,
-#    'seriesWins': record[0][0].strip(),
-#    'seriesLosses': record[0][1].strip(),
-#    'gameWins': record[1][0].strip(),
-#    'gameLosses': record[1][1].strip(),
-#}]
-
-# list out keys and values separately
-key_list = list(rankDistribution.keys())
-val_list = list(rankDistribution.values())
-
 league = {}
 
 
@@ -74,12 +41,12 @@ def teams(url):
     r2 = requests.get(url, timeout=30)
     soup2 = BeautifulSoup(r2.content, "html.parser")
     textContent = []
-    opgg = []
+
     # Retrieve names on a individual webpage
     for tag in soup2.find_all("span", title=re.compile("In-Game")):
         ign = tag.get('title').split(': ')[1]
         textContent.append(ign)
-        #opgg.append("https://na.op.gg/summoner/userName=" + ign)
+
     # op.gg
     query1 = 'https://na.op.gg/multi/query='
     query2 = 'https://na.op.gg/multi/query='
@@ -95,8 +62,8 @@ def teams(url):
 
 
 def calculations():
+    # with open('GoldLeagueTeams.json', 'r') as f:
     with open('OpenLeagueTeams.json', 'r') as f:
-    #with open('GoldLeagueTeams.json', 'r') as f:
         league = json.load(f)
 
     for key, value in league.items():
@@ -105,6 +72,6 @@ def calculations():
         league[key]['opgg1'] = data[1]
         league[key]['opgg2'] = data[2]
 
-    #with open('GoldLeagueTeams2.json', 'w') as outfile:
+    # with open('GoldLeagueTeams2.json', 'w') as outfile:
     with open('OpenLeagueTeams2.json', 'w') as outfile:
         json.dump(league, outfile)
