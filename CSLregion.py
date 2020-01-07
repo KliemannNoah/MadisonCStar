@@ -62,15 +62,17 @@ def region():
     val_list = list(rankMapping.values())
 
     # Read in File of Teams
-    #with open('GoldLeagueRank.json', 'r') as f:
     with open('OpenLeagueRank.json', 'r') as f:
-        jsonData = json.load(f)
-
-    for key, value in jsonData.items():
-        if jsonData[key]['region'] in regionRankList:
-            regionRankList[jsonData[key]['region']].append(jsonData[key]['rank5Value'])
-        else:
-            regionRankList[jsonData[key]['region']] = [jsonData[key]['rank5Value']]
+        csv_reader = json.load(f)
+    #with open('OpenLeagueTeam.csv') as csv_file:
+        #csv_reader = csv.reader(csv_file, delimiter=',')
+        for key in csv_reader:
+            #if key[0] == 'Team Name':
+            #    pass
+            if key[1] in regionRankList:
+                regionRankList[key[1]].append(int(float(key[12])))
+            else:
+                regionRankList[key[1]] = [int(float(key[12]))]
 
     # Sort within each conference
     for conference in regionRankList:
@@ -150,8 +152,7 @@ def region():
     for i in range(len(regionRankList)):
         combined.append([regionName[i], allRankNumb[i], allRank[i], top2RankNumb[i], top2Rank[i], top4RankNumb[i], top4Rank[i], top6RankNumb[i], top6Rank[i], top8RankNumb[i], top8Rank[i], top10RankNumb[i], top10Rank[i]])
 
-    #with open('GoldLeagueRegion.csv', 'w', newline='') as csvFile:
-    with open('OpenLeagueRegion.csv', 'w', newline='') as csvFile:
+    with open('OpenLeagueRegion.csv', 'wb') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(combined)
     csvFile.close()
