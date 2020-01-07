@@ -5,6 +5,7 @@ import datetime
 from collections import defaultdict
 
 rankDistribution = {
+    "TEAM ERROR": -1,
     "Unranked": 0,
     "RANK NOT FOUND": 0,
     "Iron 4": 1,
@@ -60,19 +61,23 @@ def determineTeamRank(listOfPlayerVals):
 
     if len(listOfPlayerVals) != 0:
         average = math.ceil(teamrank / len(listOfPlayerVals))
-        average5 = math.ceil(teamrank5 / 5)
+        if len(listOfPlayerVals) >= 5:
+            average5 = math.ceil(teamrank5 / 5)
+        else:
+            average5 = math.ceil(teamrank / len(listOfPlayerVals))
         response = [key_list[val_list.index(average)], average, key_list[val_list.index(average5)], average5]
     else:
         response = ["No Players Found", 0, "No Players Found", 0]
-    #print(response)
     return response
 
 
 def ranking():
     with open('OpenLeagueTeams2.json', 'r') as f:
+    #with open('GoldLeagueTeams2.json', 'r') as f:
         teams = json.load(f)
 
     with open('OpenLeaguePlayers.json', 'r') as f:
+    #with open('GoldLeaguePlayers.json', 'r') as f:
         players = json.load(f)
 
 
@@ -104,4 +109,5 @@ def ranking():
             compositeDict[key].update(value)
 
     with open('OpenLeagueRank.json', 'w') as outfile:
+    #with open('GoldLeagueRank.json', 'w') as outfile:
         json.dump(compositeDict, outfile)

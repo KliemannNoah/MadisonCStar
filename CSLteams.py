@@ -53,5 +53,6 @@ def teams(url):
                 'gameLosses': record[1][1].strip(),
             }
 
+    #with open('GoldLeagueTeams.json', 'w') as outfile:
     with open('OpenLeagueTeams.json', 'w') as outfile:
         json.dump(teamList, outfile)
