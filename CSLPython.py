@@ -5,7 +5,8 @@ from CSLregion import region
 from CSLteams import teams
 import datetime
 
-page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
+page_link = 'https://cstarleague.com/lol/standings?division=Star+League&year=2019-2020'
+#page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
 # page_link = 'https://cstarleague.com/lol/standings?division=Gold+League&year=2019-2020'
 
 print("\nStarting Full Scrape - " + datetime.datetime.now().strftime("%I:%M:%S %p"))

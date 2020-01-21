@@ -28,5 +28,6 @@ def teams(url):
             }
 
     # with open('GoldLeagueTeams.json', 'w') as outfile:
-    with open('OpenLeagueTeams.json', 'w') as outfile:
+    #with open('OpenLeagueTeams.json', 'w') as outfile:
+    with open('StarLeagueTeams.json', 'w') as outfile:
         json.dump(teamList, outfile)

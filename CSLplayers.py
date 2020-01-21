@@ -64,9 +64,9 @@ def parallel(package):
     try:
         a = soup.select_one("[class~=TierRank]" or "[class~=TierRank unranked]").text.strip()
         # Line is for Gold only
-        if rankDistribution[a] < 17:
-            playerDict[player]['rank'] = a
-            playerDict[player]['rankValue'] = rankDistribution[a]
+        #if rankDistribution[a] < 17:
+        playerDict[player]['rank'] = a
+        playerDict[player]['rankValue'] = rankDistribution[a]
     except AttributeError:
         playerDict[player]['rank'] = "RANK NOT FOUND"
         playerDict[player]['rankValue'] = 0
@@ -80,12 +80,14 @@ def players(URLlist, name, region):
 
 def pages():
     # with open('GoldLeagueTeams2.json', 'r') as f:
-    with open('OpenLeagueTeams2.json', 'r') as f:
+    # with open('OpenLeagueTeams2.json', 'r') as f:
+    with open('StarLeagueTeams2.json', 'r') as f:
         league = json.load(f)
 
     for key, value in league.items():
         players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
 
     # with open('GoldLeaguePlayers.json', 'w') as outfile:
-    with open('OpenLeaguePlayers.json', 'w') as outfile:
+    #with open('OpenLeaguePlayers.json', 'w') as outfile:
+    with open('StarLeaguePlayers.json', 'w') as outfile:
         json.dump(playerDict, outfile)

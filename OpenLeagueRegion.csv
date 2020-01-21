@@ -1,25 +1,25 @@
 Region Name,All Teams,All Teams #,2 Best Teams,2 Best Teams #,4 Best Teams,4 Best Teams #,6 Best Teams,6 Best Teams #,8 Best Teams,8 Best Teams #,10 Best Teams,10 Best Teams #
-South-west | 4,Bronze 3,6,Silver 1,12,Silver 2,11,Silver 3,10,Silver 4,9,Bronze 2,7
-South-west | 3,Iron 2,3,Silver 3,10,Bronze 1,8,Bronze 3,6,Bronze 4,5,Iron 1,4
-South-west | 2,Bronze 3,6,Gold 2,15,Gold 4,13,Silver 3,10,Silver 4,9,Bronze 1,8
-South-west | 1,Bronze 4,5,Gold 3,14,Silver 3,10,Bronze 1,8,Bronze 2,7,Bronze 3,6
-South-east | 2,Bronze 4,5,Gold 2,15,Silver 2,11,Silver 4,9,Bronze 2,7,Bronze 3,6
-South-east | 1,Bronze 3,6,Gold 3,14,Silver 1,12,Silver 2,11,Silver 4,9,Bronze 1,8
-North-west | 2,Iron 1,4,Gold 4,13,Silver 3,10,Bronze 1,8,Bronze 3,6,Bronze 4,5
-North-west | 1,Bronze 3,6,Silver 1,12,Silver 2,11,Silver 2,11,Silver 4,9,Bronze 2,7
-North-east | 8,Bronze 4,5,Gold 3,14,Silver 1,12,Silver 3,10,Bronze 1,8,Bronze 2,7
-North-east | 7,Bronze 4,5,Silver 2,11,Silver 4,9,Bronze 1,8,Bronze 2,7,Bronze 3,6
-North-east | 6,Bronze 3,6,Gold 4,13,Silver 2,11,Silver 3,10,Silver 4,9,Bronze 1,8
-North-east | 5,Bronze 3,6,Silver 1,12,Silver 2,11,Silver 4,9,Bronze 1,8,Bronze 2,7
-North-east | 4,Bronze 4,5,Gold 3,14,Silver 2,11,Silver 3,10,Bronze 1,8,Bronze 2,7
-North-east | 3,Bronze 4,5,Gold 3,14,Silver 1,12,Silver 3,10,Bronze 1,8,Bronze 2,7
-North-east | 2,Bronze 3,6,Gold 4,13,Silver 1,12,Silver 3,10,Silver 4,9,Bronze 1,8
-North-east | 1,Silver 4,9,Gold 2,15,Gold 2,15,Gold 3,14,Gold 4,13,Silver 2,11
-North | 1,Iron 1,4,Gold 2,15,Silver 2,11,Bronze 1,8,Bronze 3,6,Bronze 4,5
-East,Bronze 2,7,Gold 3,14,Gold 4,13,Silver 2,11,Silver 3,10,Silver 4,9
-Central | 6,Iron 1,4,Gold 4,13,Silver 3,10,Bronze 1,8,Bronze 3,6,Bronze 4,5
-Central | 5,Bronze 1,8,Gold 3,14,Gold 3,14,Gold 4,13,Silver 1,12,Silver 3,10
-Central | 4,Bronze 3,6,Gold 3,14,Gold 4,13,Silver 2,11,Silver 3,10,Bronze 1,8
-Central | 3,Bronze 3,6,Gold 2,15,Gold 4,13,Silver 2,11,Silver 4,9,Bronze 1,8
-Central | 2,Bronze 2,7,Gold 2,15,Gold 3,14,Silver 1,12,Silver 3,10,Silver 4,9
-Central | 1,Bronze 1,8,Gold 4,13,Silver 1,12,Silver 1,12,Silver 2,11,Silver 3,10
+South-west | 4,Platinum 3,18,Diamond 2,23,Diamond 3,22,Diamond 4,21,Platinum 1,20,Platinum 1,20
+South-west | 3,Platinum 2,19,Diamond 2,23,Diamond 2,23,Diamond 3,22,Diamond 4,21,Diamond 4,21
+South-west | 2,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+South-west | 1,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+South-east | 2,Platinum 1,20,Diamond 3,22,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+South-east | 1,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21,Diamond 4,21
+North-west | 2,Platinum 1,20,Diamond 1,24,Diamond 2,23,Diamond 2,23,Diamond 3,22,Diamond 3,22
+North-west | 1,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21,Platinum 1,20
+North-east | 8,Platinum 1,20,Diamond 1,24,Diamond 2,23,Diamond 2,23,Diamond 3,22,Diamond 4,21
+North-east | 7,Platinum 2,19,Diamond 2,23,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+North-east | 6,Platinum 2,19,Diamond 2,23,Diamond 3,22,Diamond 4,21,Diamond 4,21,Platinum 1,20
+North-east | 5,Platinum 2,19,Diamond 4,21,Diamond 4,21,Diamond 4,21,Diamond 4,21,Diamond 4,21
+North-east | 4,Platinum 2,19,Master,25,Diamond 2,23,Diamond 2,23,Diamond 3,22,Diamond 4,21
+North-east | 3,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21,Platinum 1,20
+North-east | 2,Platinum 1,20,Diamond 3,22,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+North-east | 1,Platinum 3,18,Diamond 2,23,Diamond 3,22,Diamond 4,21,Platinum 1,20,Platinum 2,19
+North | 1,Diamond 4,21,Grandmaster,26,Master,25,Diamond 1,24,Diamond 2,23,Diamond 2,23
+East,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21,Platinum 1,20
+Central | 6,Platinum 1,20,Diamond 2,23,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21
+Central | 5,Platinum 2,19,Diamond 4,21,Diamond 4,21,Platinum 1,20,Platinum 1,20,Platinum 1,20
+Central | 4,Platinum 1,20,Master,25,Diamond 2,23,Diamond 3,22,Diamond 4,21,Diamond 4,21
+Central | 3,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 4,21,Diamond 4,21,Platinum 1,20
+Central | 2,Platinum 3,18,Diamond 4,21,Diamond 4,21,Platinum 1,20,Platinum 1,20,Platinum 2,19
+Central | 1,Platinum 2,19,Diamond 3,22,Diamond 3,22,Diamond 3,22,Diamond 4,21,Platinum 1,20

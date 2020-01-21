@@ -66,6 +66,7 @@ def region():
     # Read in File of Teams
     # with open('GoldLeagueRank.json', 'r') as f:
     with open('OpenLeagueRank.json', 'r') as f:
+    #with open('StarLeagueRank.json', 'r') as f:
         jsonData = json.load(f)
 
     for key, value in jsonData.items():
@@ -154,6 +155,10 @@ def region():
 
     # with open('GoldLeagueRegion.csv', 'w', newline='') as csvFile:
     with open('OpenLeagueRegion.csv', 'w', newline='') as csvFile:
+    #with open('StarLeagueRegion.csv', 'w', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(combined)
     csvFile.close()
+
+
+region()
