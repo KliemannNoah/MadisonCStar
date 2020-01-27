@@ -79,15 +79,15 @@ def players(URLlist, name, region):
 
 
 def pages():
-    # with open('GoldLeagueTeams2.json', 'r') as f:
-    # with open('OpenLeagueTeams2.json', 'r') as f:
-    with open('StarLeagueTeams2.json', 'r') as f:
+    with open('GoldLeagueTeams2.json', 'r') as f:
+    #with open('OpenLeagueTeams2.json', 'r') as f:
+    # with open('StarLeagueTeams2.json', 'r') as f:
         league = json.load(f)
 
     for key, value in league.items():
         players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
 
-    # with open('GoldLeaguePlayers.json', 'w') as outfile:
+    with open('GoldLeaguePlayers.json', 'w') as outfile:
     #with open('OpenLeaguePlayers.json', 'w') as outfile:
-    with open('StarLeaguePlayers.json', 'w') as outfile:
+    # with open('StarLeaguePlayers.json', 'w') as outfile:
         json.dump(playerDict, outfile)
