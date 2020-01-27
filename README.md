@@ -33,29 +33,29 @@ Reads in the team file and averages out how strong that region is relative to th
 # CSV File Descriptions
 CSV files are a type of data storage similar to a spreadsheet and can be open in traditional spreadsheet applications like Excell and Google Sheets, but some low importance columns do not work well in Excell so Google Sheets is recommended. 
 
-### OpenLeagueTeams
+### (Open/Gold/Star)LeagueTeams
 DEPRECATED - This file contains all of the information related to a single team, namely their name, region, standing, average rank and list of players.
 
-### OpenLeaguePlayers
+### (Open/Gold)LeaguePlayers
 DEPRECATED - This file is a master list of every CSLplayer in that League. Namely stores region, team name, player name, rank, and op.gg
 
-### OpenLeagueRegion
+### (Open/Gold/Star)LeagueRegion
 This file contains a ranking of all of the regions in the League.
 
 # Areas of Futre Improvement
 
 ### Planned
-- Multi-Thread HTTP Requests to speed up performance (Partially Complete)
-- Modularize some function methods to make it easier to run without needing to run the whole script (Complete)
+- Multi-Thread HTTP Requests to speed up performance [COMPLETE]
+- Modularize some function methods to make it easier to run without needing to run the whole script [COMPLETE]
 - Better comments are needed in order to pass on this script to new users
 - Find a way to create a historical set of CSV files to look at past information
 - Extract and manipulate previous season ranks from OP.GG for after rank reset
 - Modularize ouput to allow users to only export columns they want to see
-- Save the team data continuously encase of failover (Complete)
+- Save the team data continuously encase of failover [COMPLETE]
 - Split files into different repositories
 
 ### Stretch Goals
 - Include Visualization Metrics into the site for apperance purposes
-- Possibly change data structures to dict of dicts instead of dict with a list (Complete)
+- Possibly change data structures to dict of dicts instead of dict with a list [COMPLETE]
 - Create documentation on how to do some of the website parsing work from scratch incase of CSL changes
 - Find a way to replicate this for playoffs
