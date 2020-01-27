@@ -34,10 +34,10 @@ Reads in the team file and averages out how strong that region is relative to th
 CSV files are a type of data storage similar to a spreadsheet and can be open in traditional spreadsheet applications like Excell and Google Sheets, but some low importance columns do not work well in Excell so Google Sheets is recommended. 
 
 ### (Open/Gold/Star)LeagueTeams
-DEPRECATED - This file contains all of the information related to a single team, namely their name, region, standing, average rank and list of players.
+This file contains all of the information related to a single team, namely their name, region, standing, average rank and list of players.
 
 ### (Open/Gold)LeaguePlayers
-DEPRECATED - This file is a master list of every CSLplayer in that League. Namely stores region, team name, player name, rank, and op.gg
+This file is a master list of every CSLplayer in that League. Namely stores region, team name, player name, rank, and op.gg
 
 ### (Open/Gold/Star)LeagueRegion
 This file contains a ranking of all of the regions in the League.
