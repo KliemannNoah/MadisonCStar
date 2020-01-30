@@ -4,22 +4,6 @@
     <list default="true" id="0f445f36-88b2-4c4c-bd7d-4cb6e6968b43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLPython.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLcalculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLcalculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLcsvmaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLcsvmaker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLplayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLplayers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLrank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLregion.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLregion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLteams.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLteams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeaguePlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueRank.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueTeams.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueTeams.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueTeams2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeaguePlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueRegion.csv" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRegion.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams2.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLPython.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -65,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSLplayers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
+            <state relative-caret-position="340">
               <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
             </state>
           </provider>
@@ -99,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLcsvmaker.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -137,12 +121,12 @@
         <option value="$PROJECT_DIR$/CSLplayers.py" />
         <option value="$PROJECT_DIR$/CSLrank.py" />
         <option value="$PROJECT_DIR$/CSLregion.py" />
-        <option value="$PROJECT_DIR$/CSLPython.py" />
         <option value="$PROJECT_DIR$/CSLcsvmaker.py" />
+        <option value="$PROJECT_DIR$/CSLPython.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -190,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CSLcsvmaker">
+  <component name="RunManager" selected="Python.CSLPython (1)">
     <configuration name="CSLPython (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MadisonCStar" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -392,8 +376,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.CSLcsvmaker" />
         <item itemvalue="Python.CSLPython (1)" />
+        <item itemvalue="Python.CSLcsvmaker" />
         <item itemvalue="Python.CSLregion" />
         <item itemvalue="Python.CSLPython" />
       </list>
@@ -425,7 +409,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12174479" />
@@ -492,13 +476,6 @@
     <state x="661" y="343" key="com.intellij.ide.util.TipDialog/3840.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578411047689" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CSLplayers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSLregion.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -520,32 +497,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSLcalculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#88#664#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSLrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="71" column="49" lean-forward="true" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
           <folding>
             <element signature="e#80#678#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSLPython.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -557,6 +514,33 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLPython.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLcalculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#88#664#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLplayers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
         </state>
       </provider>
     </entry>

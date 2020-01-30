@@ -21,10 +21,10 @@ print("\tScraping Teams Pages - " + datetime.datetime.now().strftime("%I:%M:%S %
 #pages()
 
 print("\tCalculating Team Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-ranking()
+#ranking()
 
 #print("\tGenerating Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-#region()
+region()
 
 print("Complete - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
 
