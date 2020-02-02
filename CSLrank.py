@@ -66,15 +66,11 @@ def determineTeamRank(listOfPlayerVals):
     return response
 
 
-def ranking():
-    #with open('StarLeagueTeams2.json', 'r') as f:
-    #with open('OpenLeagueTeams2.json', 'r') as f:
-    with open('GoldLeagueTeams2.json', 'r') as f:
+def ranking(leagueName):
+    with open(leagueName + 'LeagueTeams2.json', 'r') as f:
         teams = json.load(f)
 
-    #with open('StarLeaguePlayers.json', 'r') as f:
-    #with open('OpenLeaguePlayers.json', 'r') as f:
-    with open('GoldLeaguePlayers.json', 'r') as f:
+    with open(leagueName + 'LeaguePlayers.json', 'r') as f:
         players = json.load(f)
 
     tempTeams = {}
@@ -103,7 +99,5 @@ def ranking():
         for key, value in dictionary.items():
             compositeDict[key].update(value)
 
-    #with open('StarLeagueRank.json', 'w') as outfile:
-    #with open('OpenLeagueRank.json', 'w') as outfile:
-    with open('GoldLeagueRank.json', 'w') as outfile:
+    with open(leagueName + 'LeagueRank.json', 'w') as outfile:
         json.dump(compositeDict, outfile)

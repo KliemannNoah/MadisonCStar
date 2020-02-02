@@ -3,28 +3,43 @@ from CSLcalculator import calculations
 from CSLrank import ranking
 from CSLregion import region
 from CSLteams import teams
+from CSLcsvmaker import teamCSV, playerCSV
 import datetime
 
-#page_link = 'https://cstarleague.com/lol/standings?division=Star+League&year=2019-2020'
-#page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
+# page_link = 'https://cstarleague.com/lol/standings?division=Star+League&year=2019-2020'
+# leagueSelection = 'Star'
+
+# page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
+# leagueSelection = 'Open'
+
 page_link = 'https://cstarleague.com/lol/standings?division=Gold+League&year=2019-2020'
+leagueSelection = 'Gold'
 
 print("\nStarting Full Scrape - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
 
 print("\tScraping Standings Page - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-#teams(page_link)
+teams(page_link, leagueSelection)
 
 print("\tScraping Teams Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-#calculations()
+calculations(leagueSelection)
 
-#print("\tScraping Players Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-#pages()
+# print("\tScraping Players Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+# pages()
+
+print("\n\tEnd Scraping")
+print("\tStart Processing\n")
 
 print("\tCalculating Team Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-#ranking()
+ranking(leagueSelection)
 
-#print("\tGenerating Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-region()
+print("\tGenerating Ranks - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+region(leagueSelection)
+
+print("\tGenerating Team CSV - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+teamCSV(leagueSelection)
+
+print("\tGenerating Player CSV - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+playerCSV(leagueSelection)
 
 print("Complete - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
 

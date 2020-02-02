@@ -61,10 +61,8 @@ def teams(url):
     return [textContent, query1, query2]
 
 
-def calculations():
-    with open('GoldLeagueTeams.json', 'r') as f:
-    #with open('OpenLeagueTeams.json', 'r') as f:
-    #with open('StarLeagueTeams.json', 'r') as f:
+def calculations(leagueName):
+    with open(leagueName + 'LeagueTeams.json', 'r') as f:
         league = json.load(f)
 
     for key, value in league.items():
@@ -73,7 +71,5 @@ def calculations():
         league[key]['opgg1'] = data[1]
         league[key]['opgg2'] = data[2]
 
-    with open('GoldLeagueTeams2.json', 'w') as outfile:
-    #with open('OpenLeagueTeams2.json', 'w') as outfile:
-    #with open('StarLeagueTeams2.json', 'w') as outfile:
+    with open(leagueName + 'LeagueTeams2.json', 'w') as outfile:
         json.dump(league, outfile)

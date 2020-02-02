@@ -5,7 +5,7 @@ import json
 teamList = {}
 
 
-def teams(url):
+def teams(url, leagueName):
     r = requests.get(url, timeout=30)
     soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -27,7 +27,5 @@ def teams(url):
                 'gameLosses': record[1][1].strip(),
             }
 
-    with open('GoldLeagueTeams.json', 'w') as outfile:
-    #with open('OpenLeagueTeams.json', 'w') as outfile:
-    #with open('StarLeagueTeams.json', 'w') as outfile:
+    with open(leagueName + 'LeagueTeams.json', 'w') as outfile:
         json.dump(teamList, outfile)
