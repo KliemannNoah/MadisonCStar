@@ -1,10 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
-import csv
-import re
-import datetime
-import math
-
+from multiprocessing.dummy import Pool as ThreadPool
+import concurrent.futures
+import json
 rankDistribution = {
     "Unranked": 0,
     "RANK NOT FOUND": 0,
@@ -36,46 +34,57 @@ rankDistribution = {
     "Grandmaster": 26,
     "Challenger": 27
 }
-# list out keys and values separately
-key_list = list(rankDistribution.keys())
-val_list = list(rankDistribution.values())
+playerDict = {
+    #'name': 'IGN',
+    #'team': 'Team',
+    #'region': 'Region',
+    #'rank': 'Rank',
+    #'rankValue': 'Rank Value',
+    #'op.gg': 'OP.GG'
+}
+pool = ThreadPool(10)
+
+
+def parallel(package):
+    player = package[0]
+    team = package[1]
+    region = package[2]
+    r = requests.get("https://na.op.gg/summoner/userName=" + player, timeout=30)
+    soup = BeautifulSoup(r.content, "html.parser")
+
+    playerDict[player] = {
+        'name': player,
+        'team': team,
+        'region': region,
+        'rank': "NOT INPUT",
+        'rankValue': -1,
+        'op.gg': "https://na.op.gg/summoner/userName=" + player
+    }
+
+    try:
+        a = soup.select_one("[class~=TierRank]" or "[class~=TierRank unranked]").text.strip()
+        # Line is for Gold only
+
+        #if rankDistribution[a] < 17:
+        playerDict[player]['rank'] = a
+        playerDict[player]['rankValue'] = rankDistribution[a]
+    except AttributeError:
+        playerDict[player]['rank'] = "RANK NOT FOUND"
+        playerDict[player]['rankValue'] = 0
 
 
 def players(URLlist, name, region):
-    playerList = []
-    playerRankFull = []
-    playerRank5 = []
-    teamrank = 0
-	teamrank5 = 0
-    for player in URLlist:
-        page_link = player
-        r = requests.get(page_link, timeout=30)
-        soup = BeautifulSoup(r.content, "html5lib")
-        try:
-            a = soup.select_one("[class~=TierRank]" or "[class~=TierRank unranked]").text.strip()
-            playerList.append([name, region, a, rankDistribution[a], player.encode("utf-8")])
-            playerRankFull.append(rankDistribution[a])
-        except AttributeError:
-            playerList.append([name, region, "RANK NOT FOUND", 0, player.encode("utf-8")])
-            playerRankFull.append(0)
+    executor = concurrent.futures.ThreadPoolExecutor(10)
+    futures = [executor.submit(parallel, [player, name, region]) for player in URLlist]
+    concurrent.futures.wait(futures)
 
-    with open('OpenLeaguePlayers.csv', 'ab') as csvFile:
-        writer = csv.writer(csvFile)
-        writer.writerows(playerList)
-    csvFile.close()
 
-    for rank in playerRankFull:
-        teamrank = teamrank + rank
-		
-	playerRankFull.sort(reverse=True)
-	
-	for rank in playerRankFull[:5]:
-		teamrank5 = teamrank5 + rank
-	
-    if len(playerRankFull) != 0:
-        average = math.ceil(teamrank / len(playerRankFull))
-		average5 = math.ceil(teamrank5 / 5)
-        response = [key_list[val_list.index(average)], average, key_list[val_list.index(average5)], average5]
-    else:
-        response = ["No Players Found", 0, "No Players Found", 0]
-    return response
+def pages(leagueName):
+    with open(leagueName + 'LeagueTeams2.json', 'r') as f:
+        league = json.load(f)
+
+    for key, value in league.items():
+        players(league[key]['playerList'], league[key]['teamName'], league[key]['region'])
+
+    with open(leagueName + 'LeaguePlayers.json', 'w') as outfile:
+        json.dump(playerDict, outfile)

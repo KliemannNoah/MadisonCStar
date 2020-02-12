@@ -1,9 +1,12 @@
 import csv
 from collections import defaultdict
 import math
+import json
+
+league = {}
 
 
-def region():
+def region(leagueName):
     rankMapping = {
         "Unranked": 0,
         "RANK NOT FOUND": 0,
@@ -61,15 +64,14 @@ def region():
     val_list = list(rankMapping.values())
 
     # Read in File of Teams
-    with open('OpenLeagueTeam.csv') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        for key in csv_reader:
-            if key[0] == 'Team Name':
-                pass
-            elif key[1] in regionRankList:
-                regionRankList[key[1]].append(int(float(key[12])))
-            else:
-                regionRankList[key[1]] = [int(float(key[12]))]
+    with open(leagueName + 'LeagueRank.json', 'r') as f:
+        jsonData = json.load(f)
+
+    for key, value in jsonData.items():
+        if jsonData[key]['region'] in regionRankList:
+            regionRankList[jsonData[key]['region']].append(jsonData[key]['rank5Value'])
+        else:
+            regionRankList[jsonData[key]['region']] = [jsonData[key]['rank5Value']]
 
     # Sort within each conference
     for conference in regionRankList:
@@ -149,7 +151,7 @@ def region():
     for i in range(len(regionRankList)):
         combined.append([regionName[i], allRankNumb[i], allRank[i], top2RankNumb[i], top2Rank[i], top4RankNumb[i], top4Rank[i], top6RankNumb[i], top6Rank[i], top8RankNumb[i], top8Rank[i], top10RankNumb[i], top10Rank[i]])
 
-    with open('OpenLeagueRegion.csv', 'wb') as csvFile:
+    with open(leagueName + 'LeagueRegion.csv', 'w', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(combined)
     csvFile.close()
