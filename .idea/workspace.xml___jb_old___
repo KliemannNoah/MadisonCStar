@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f445f36-88b2-4c4c-bd7d-4cb6e6968b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeaguePlayers.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeaguePlayers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeagueRank.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeagueRank.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeagueRegion.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeagueTeams.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2LeagueTeams2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2PlayoffLeagueRank.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LastSeasonGold/GoldOld2PlayoffLeagueRank.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLPlayoffScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLPlayoffScraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLPython.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSLcsvmaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLcsvmaker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarLeague/StarLeaguePlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarLeague/StarLeagueRank.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarLeagueRegion.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StarLeague/StarLeagueRegion.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarLeagueTeams.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarLeague/StarLeagueTeams.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarLeague/StarLeagueTeams2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldLeaguePlayoffTeamsOld.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarLeaguePlayers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarLeagueRank.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarLeagueRegion.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarLeagueTeams.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarLeagueTeams2.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,16 +24,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLPython.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="204">
+              <caret line="66" selection-start-line="66" selection-end-line="72" selection-end-column="22" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#1106#1244#0" />
+                <element signature="e#1259#1672#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSLteams.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -59,7 +53,6 @@
             <state relative-caret-position="-306">
               <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#88#664#0" />
               </folding>
             </state>
@@ -97,6 +90,7 @@
               <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#118#814#0" />
               </folding>
             </state>
           </provider>
@@ -117,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSLPlayoffScraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="102">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -156,8 +150,8 @@
         <option value="$PROJECT_DIR$/CSLrank.py" />
         <option value="$PROJECT_DIR$/CSLregion.py" />
         <option value="$PROJECT_DIR$/CSLteams.py" />
-        <option value="$PROJECT_DIR$/CSLcsvmaker.py" />
         <option value="$PROJECT_DIR$/CSLPython.py" />
+        <option value="$PROJECT_DIR$/CSLcsvmaker.py" />
         <option value="$PROJECT_DIR$/CSLPlayoffScraper.py" />
       </list>
     </option>
@@ -174,6 +168,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -401,14 +395,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.CSLPython (1)" />
       <item itemvalue="Python.CSLPython" />
       <item itemvalue="Python.CSLcalculator" />
-      <item itemvalue="Python.CSLcsvmaker" />
       <item itemvalue="Python.CSLplayers" />
       <item itemvalue="Python.CSLrank" />
-      <item itemvalue="Python.CSLregion" />
       <item itemvalue="Python.CSLteams" />
+      <item itemvalue="Python.CSLPython (1)" />
+      <item itemvalue="Python.CSLcsvmaker" />
+      <item itemvalue="Python.CSLregion" />
     </list>
     <recent_temporary>
       <list>
@@ -515,10 +509,30 @@
     <entry file="file://$PROJECT_DIR$/GoldLeaguePlayers.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldLeaguePlayoffTeamsOld.json" />
-    <entry file="file://$PROJECT_DIR$/GoldLeaguePlayoffTeamsOld.csv" />
-    <entry file="file://$PROJECT_DIR$/GoldOldLeagueTeams.json" />
-    <entry file="file://$PROJECT_DIR$/GoldOldLeagueTeams2.json" />
+    <entry file="file://$PROJECT_DIR$/GoldLeaguePlayoffTeamsOld.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldLeaguePlayoffTeamsOld.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldOldLeagueTeams.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="464" selection-start-column="464" selection-end-column="464" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldOldLeagueTeams2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4082" selection-start-column="4082" selection-end-column="4082" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CSLteams.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -529,7 +543,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldOld2LeagueTeams2.json" />
+    <entry file="file://$PROJECT_DIR$/CSLPython.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="66" selection-start-line="66" selection-end-line="72" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldOld2LeagueTeams2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret column="41311" selection-start-column="41311" selection-end-column="41311" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CSLrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -545,7 +575,7 @@
         <state relative-caret-position="305">
           <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#80#678#0" />
           </folding>
         </state>
       </provider>
@@ -581,21 +611,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldOld2PlayoffLeagueRank.csv" />
-    <entry file="file://$PROJECT_DIR$/CSLPython.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GoldOld2PlayoffLeagueRank.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CSLPlayoffScraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="102">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
