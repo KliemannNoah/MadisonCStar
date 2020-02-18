@@ -9,11 +9,11 @@ import datetime
 #page_link = 'https://cstarleague.com/lol/standings?division=Star+League&year=2019-2020'
 #leagueSelection = 'Star'
 
-# page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
-# leagueSelection = 'Open'
+page_link = 'https://cstarleague.com/lol/standings?division=Open+League&year=2019-2020'
+leagueSelection = 'Open'
 
-page_link = 'https://cstarleague.com/lol/standings?division=Gold+League&year=2019-2020'
-leagueSelection = 'Gold'
+#page_link = 'https://cstarleague.com/lol/standings?division=Gold+League&year=2019-2020'
+#leagueSelection = 'Gold'
 
 #page_link = 'https://cstarleague.com/lol/standings?division=Junior+Varsity+2&year=2018-2019'
 #leagueSelection = 'GoldOld2'
@@ -26,8 +26,8 @@ teams(page_link, leagueSelection)
 print("\tScraping Teams Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
 calculations(leagueSelection)
 
-print("\tScraping Players Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
-pages(leagueSelection)
+#print("\tScraping Players Pages - " + datetime.datetime.now().strftime("%I:%M:%S %p"))
+#pages(leagueSelection)
 
 print("\n\tEnd Scraping")
 print("\tStart Processing\n")
