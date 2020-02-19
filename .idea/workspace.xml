@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0f445f36-88b2-4c4c-bd7d-4cb6e6968b43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_old___" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSLPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSLPython.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueRank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueRank.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueRank.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueTeams.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueTeams.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldLeagueTeams2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenLeagueTeams2.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueTeams2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeaguePlayers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeaguePlayers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeaguePlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeaguePlayers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenLeagueRank.json" beforeDir="false" afterPath="$PROJECT_DIR$/OpenLeagueRank.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSLPython.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="91">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -72,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSLrank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="599">
               <caret line="94" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#80#678#0" />
@@ -109,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/CSLPlayoffScraper.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -134,6 +130,7 @@
       <find>lcs</find>
       <find>league</find>
       <find>high point</find>
+      <find>Jason bOrnn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,10 +151,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="x" value="23" />
+    <option name="y" value="-23" />
+    <option name="width" value="1694" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectId" id="1Uw02urRO1heiCRZImH7IVFxiay" />
   <component name="ProjectView">
@@ -443,7 +440,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.37677053" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986979" visible="true" weight="0.51699716" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986979" weight="0.51699716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -520,26 +517,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GoldOld2LeagueTeams2.json" />
-    <entry file="file://$PROJECT_DIR$/CSLrank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="e#80#678#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSLregion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSLplayers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -575,9 +552,29 @@
     <entry file="file://$PROJECT_DIR$/CSLPlayoffScraper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLregion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSLrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#80#678#0" />
           </folding>
         </state>
       </provider>
@@ -585,7 +582,8 @@
     <entry file="file://$PROJECT_DIR$/CSLPython.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="91">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
