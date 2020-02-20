@@ -5,18 +5,25 @@ import csv
 teamList = []
 playoffTeams = {}
 league = {}
+league2 = {}
+playoffPlayers = {}
 
 def playoffPage(url):
     r = requests.get(url, timeout=10)
     soup = BeautifulSoup(r.content, 'html.parser')
 
-    for tag in soup.find_all('div', {"class": "tournament-bracket-container"}):
+    for tag in soup.find_all('div', {"class": "tournament-bracket-container double-elim"}):
         vals = str(tag.get('data-bracket-teams'))
         x = vals.replace('[', '').replace(']', '')
         record1 = [q.strip() for q in x.replace('{', '').replace('\"', '').split('}')[:-1]]
         for record in record1:
-            record2 = record[1:].split(',')[0].split(':')[1].strip()
-            teamList.append(record2)
+
+            if record.find('null') == -1:
+                record2 = record[1:].split(',')[0].split(':')[1].strip()
+                teamList.append(record2)
+            else:
+                record2 = record[1:].split(',')[1].split(':')[1].strip()
+                teamList.append(record2)
 
     with open('GoldLeagueRank.json', 'r') as f:
         league = json.load(f)
@@ -41,7 +48,8 @@ def playoffPage(url):
 
     with open('GoldPlayoffLeagueRank.json', 'w') as outfile:
         json.dump(playoffTeams, outfile)
-    teamCSV()
+    #teamCSV()
+    playerPage()
 
 
 def teamCSV():
@@ -60,4 +68,42 @@ def teamCSV():
             writer.writerow(data)
 
 
-playoffPage('LINK')
+def playerPage():
+    with open('GoldLeaguePlayers.json', 'r') as f:
+        league2 = json.load(f)
+    for team in teamList:
+        for play in league2:
+            #print(play)
+            #print(league2[play]['team'])
+            if league2[play]['team'] == team:
+                playoffPlayers[league2[play]['name']] = {
+                        'name': league2[play]['name'],
+                        'team': league2[play]['team'],
+                        'region': league2[play]['region'],
+                        'rank': league2[play]['rank'],
+                        'rankValue': league2[play]['rankValue'],
+                        'op.gg': league2[play]['op.gg']
+        }
+
+    with open('GoldPlayoffLeaguePlayers.json', 'w') as outfile:
+        json.dump(playoffPlayers, outfile)
+        
+    playerCSV()
+
+def playerCSV():
+    leaguePlayers = {}
+    csv_columns = ['name', 'team', 'region', 'rank', 'rankValue', 'op.gg']
+
+    with open('GoldPlayoffLeaguePlayers.json', 'r') as f:
+        leaguePlayers = json.load(f)
+
+    leagueList = [v for v in leaguePlayers.values()]
+
+    with open('GoldLeaguePlayoffsPlayers.csv', 'w', newline="", encoding="UTF-8") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+        writer.writeheader()
+        for data in leagueList:
+            writer.writerow(data)
+
+
+playoffPage('https://cstarleague.com/lol/playoffs?division=97&year=2019-2020')
