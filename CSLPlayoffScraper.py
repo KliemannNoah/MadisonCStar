@@ -25,7 +25,7 @@ def playoffPage(url):
                 record2 = record[1:].split(',')[1].split(':')[1].strip()
                 teamList.append(record2)
 
-    with open('GoldLeagueRank.json', 'r') as f:
+    with open('OpenLeagueRank.json', 'r') as f:
         league = json.load(f)
 
     for team in teamList:
@@ -46,9 +46,9 @@ def playoffPage(url):
                 'opgg2': league[team]['opgg2']
         }
 
-    with open('GoldPlayoffLeagueRank.json', 'w') as outfile:
+    with open('OpenPlayoffLeagueRank.json', 'w') as outfile:
         json.dump(playoffTeams, outfile)
-    #teamCSV()
+    teamCSV()
     playerPage()
 
 
@@ -56,12 +56,12 @@ def teamCSV():
     csvleague = {}
     csv_columns = ['teamName', 'region', 'link',  'seriesWins', 'seriesLosses', 'gameWins',
                    'gameLosses', 'rank5', 'rank5Value', 'rank', 'rankValue', 'playerList', 'opgg1', 'opgg2']
-    with open('GoldPlayoffLeagueRank.json', 'r') as f:
+    with open('OpenPlayoffLeagueRank.json', 'r') as f:
         csvleague = json.load(f)
 
     leagueList = [v for v in csvleague.values()]
 
-    with open('GoldPlayoffLeagueRank.csv', 'w', newline="", encoding="UTF-8") as csvfile:
+    with open('OpenPlayoffLeagueRank.csv', 'w', newline="", encoding="UTF-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in leagueList:
@@ -69,7 +69,7 @@ def teamCSV():
 
 
 def playerPage():
-    with open('GoldLeaguePlayers.json', 'r') as f:
+    with open('OpenLeaguePlayers.json', 'r') as f:
         league2 = json.load(f)
     for team in teamList:
         for play in league2:
@@ -85,25 +85,25 @@ def playerPage():
                         'op.gg': league2[play]['op.gg']
         }
 
-    with open('GoldPlayoffLeaguePlayers.json', 'w') as outfile:
+    with open('OpenPlayoffLeaguePlayers.json', 'w') as outfile:
         json.dump(playoffPlayers, outfile)
-        
+
     playerCSV()
 
 def playerCSV():
     leaguePlayers = {}
     csv_columns = ['name', 'team', 'region', 'rank', 'rankValue', 'op.gg']
 
-    with open('GoldPlayoffLeaguePlayers.json', 'r') as f:
+    with open('OpenPlayoffLeaguePlayers.json', 'r') as f:
         leaguePlayers = json.load(f)
 
     leagueList = [v for v in leaguePlayers.values()]
 
-    with open('GoldLeaguePlayoffsPlayers.csv', 'w', newline="", encoding="UTF-8") as csvfile:
+    with open('OpenLeaguePlayoffsPlayers.csv', 'w', newline="", encoding="UTF-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
         writer.writeheader()
         for data in leagueList:
             writer.writerow(data)
 
 
-playoffPage('https://cstarleague.com/lol/playoffs?division=97&year=2019-2020')
+playoffPage('https://cstarleague.com/lol/playoffs?division=96&year=2019-2020')
